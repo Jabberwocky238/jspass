@@ -1,0 +1,46 @@
+[package]
+name = "jspass"
+version = "0.1.0"
+edition = "2024"
+description = "JavaScript to register bytecode through an MLIR dialect (js), on the mlirformat / mlirpass stack"
+license = "MIT"
+repository = "https://github.com/Jabberwocky238/jspass"
+keywords = ["javascript", "mlir", "bytecode", "compiler"]
+categories = ["compilers"]
+readme = "README.md"
+exclude = ["tests/", "scripts/"]
+
+[dependencies]
+mlirformat = { version = "=0.6.5", default-features = false, features = ["std"] }
+mlirpass = { version = "=0.8.11", default-features = false, features = ["std", "dialect.cf"] }
+oxc_allocator = "0.158"
+oxc_ast = "0.158"
+oxc_parser = "0.158"
+oxc_span = "0.158"
+ryu-js = "1"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+doc_markdown = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"
+# 解释器按 ECMAScript 在 f64 / 整数间换算（ToInt32、下标、长度），转换是有意的
+cast_possible_truncation = "allow"
+cast_possible_wrap = "allow"
+cast_precision_loss = "allow"
+cast_sign_loss = "allow"
+float_cmp = "allow"
+many_single_char_names = "allow"
+too_many_lines = "allow"
+similar_names = "allow"
+# oxc 的 JSStr 不对外导出，`|c| c.as_str()` 写不成方法路径
+redundant_closure_for_method_calls = "allow"
+
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+debug = false

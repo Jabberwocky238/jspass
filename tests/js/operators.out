@@ -1,0 +1,13 @@
+3 -3 42 0.3333333333333333 1 -1 1024 1.4142135623730951
+Infinity -Infinity NaN -0 0.30000000000000004 1e+21 123456789012345680000 5e-7
+a1 1a 12 9 null xundefined 2
+1 7 6 -6 -2147483648 -4 15 0
+true false true false true true false
+true true true false true true true
+number string boolean undefined object object object function
+true true true undefined -3 42 31 1000 NaN 0 0
+2 0 d n 0 y
+2
+2
+10 11 12 12 10 10
+t 2 x y3

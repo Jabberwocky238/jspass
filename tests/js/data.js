@@ -1,0 +1,15 @@
+let o = { a: 1, b: "two", "c-d": [1, 2, 3] };
+o.e = { f: null };
+o["g"] = true;
+console.log(o);
+console.log(o.a, o.b, o["c-d"][1], o.e.f, o.missing);
+let arr = [];
+for (let i = 0; i < 5; i++) arr.push(i * i);
+console.log(arr, arr.length, arr[2], arr[9]);
+arr[7] = 1;
+console.log(arr.length, arr.pop(), arr.length);
+console.log([1, [2, [3, [4]]]], {}, [], [ "a", 'b"c', "d'e" ]);
+let s = "héllo";
+console.log(s.length, s[1], s.charCodeAt(0), "" + [1, 2, null, 3]);
+console.log(Math.PI, Math.floor(-2.5), Math.ceil(2.1), Math.round(2.5), Math.round(-2.5), Math.abs(-3));
+console.log(Math.max(1, 5, 3), Math.min(), Math.sqrt(2), Math.pow(2, 8), (3.14159).toFixed(2));

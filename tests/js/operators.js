@@ -1,0 +1,13 @@
+console.log(1 + 2, 7 - 10, 6 * 7, 1 / 3, 7 % 3, -7 % 3, 2 ** 10, 2 ** 0.5);
+console.log(1 / 0, -1 / 0, 0 / 0, -0, 0.1 + 0.2, 1e21, 123456789012345680000, 5e-7);
+console.log("a" + 1, 1 + "a", "3" * "4", "10" - 1, "" + null, "x" + undefined, true + 1);
+console.log(5 & 3, 5 | 3, 5 ^ 3, ~5, 1 << 31, -16 >> 2, -16 >>> 28, 2 ** 32 | 0);
+console.log(1 < 2, "b" < "a", "10" < "9", 10 < "9", null >= 0, undefined == null, NaN == NaN);
+console.log(0 == "", "1" == 1, true == 1, null == 0, [1] == 1, "abc" === "abc", 0 === -0);
+console.log(typeof 1, typeof "s", typeof true, typeof undefined, typeof null, typeof {}, typeof [], typeof console.log);
+console.log(!0, !"", !!"x", void 0, -"3", +"  42  ", +"0x1f", +"1e3", +"abc", +"", +[]);
+console.log(1 && 2, 0 && 2, 0 || "d", null ?? "n", 0 ?? "z", true ? "y" : "n");
+let a = 5; a += 2; a *= 3; a -= 1; a /= 4; a %= 3; console.log(a);
+let b = 1; b <<= 4; b |= 1; b ^= 3; b &= 14; console.log(b);
+let c = 10; console.log(c++, c, ++c, c--, --c, c);
+console.log(`t ${1 + 1} x ${"y"}${3}`);
